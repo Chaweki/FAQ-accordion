@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/Chaweki/FAQ-accordion-card-main
-- Live Site URL: https://chaweki.github.io/FAQ-accordion-card-main/
+- Solution URL: https://github.com/Chaweki/FAQ-accordion/
+- Live Site URL: https://chaweki.github.io/FAQ-accordion/
 ## My process
 
 ### Built with

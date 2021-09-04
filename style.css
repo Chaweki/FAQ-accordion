@@ -1,0 +1,162 @@
+*,::after,::before{
+    box-sizing: border-box
+}
+
+body{
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 12px;
+    background:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%) ) ;
+    
+}
+.flex{
+    position: relative;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column
+
+}
+main{
+    padding: 10px;
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-position: -578px 73%;
+    background-color: #ffffff;
+    width: 920px;
+    height: 516px;
+
+
+    
+    position: relative;
+   
+
+    display: flex;
+    align-items: center;
+    border-radius:25px;
+
+    box-shadow: -10px 20px 38px -21px;  
+
+}
+.faq{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
+h1{
+    
+    font-size: 2rem;
+    font-weight: 700
+}
+.faq-qst{
+    height: 100%;
+    overflow-y: auto ;
+ 
+}
+details{
+    padding: 10px;
+    
+    margin-bottom: 10px;
+    width: 80%;
+    border-bottom: 1px solid hsl(240, 5%, 91%) 
+}
+details  summary{
+    font-size: 1rem;
+    margin-bottom: 6px;
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+    color:  hsl(237, 12%, 33%)
+
+
+}
+details  summary:hover{
+    color: hsl(14, 88%, 65%)
+
+}
+details  summary::-webkit-details-marker {
+    display: none;
+}
+details summary::after{
+    content: url(images/icon-arrow-down.svg);
+    display: inline;
+    float: right;
+}
+details[open] summary{
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+details[open] summary::after{
+    content: url(images/icon-arrow-down.svg);
+    display: inline;
+    float: right;
+    transform: rotate(180deg)
+}
+details p {
+    color:hsl(240, 6%, 50%)
+}
+.woman{
+    transform: translate(-10px, -9px);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.woman img {
+    z-index: 0;
+    transform: translate(-85px,61px);
+    
+}
+
+main::before{
+    content: url(images/illustration-box-desktop.svg);
+    position: absolute ;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translate(-51%,-33%)
+}
+
+@media screen and (max-width:1024px){
+    main{
+        width: 375px;
+        height: auto;
+        padding: 10px;
+        background: url(images/bg-pattern-mobile.svg) no-repeat;
+        background-position: top 0 left 50%;
+        background-color: #ffffff;
+        
+    }
+    main::before{
+        content: ''
+
+    }
+    .woman{
+        overflow: visible ;
+        height:auto;
+        width: auto;
+        position: absolute;
+        top:0;
+        left: 48%;
+        transform: translate(-50% ,-50%)
+    }
+    .woman img {
+        transform: none
+    }
+    .faq{
+        padding: 104px 0 35px 0;
+    }
+    .faq h1{
+        text-align: center
+    }
+    .faq-qst details{
+        width: 100%;
+    }
+    details  summary:hover{
+    color: initial
+
+}
+}
